@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GithubService } from '../services/github.service';
 
 @Component({
   selector: 'app-gitsearch',
@@ -14,7 +15,5 @@ export class GitsearchComponent implements OnInit {
   }
  title = 'GITHUB SEARCH';
 
- btnClick(){
-  this.router.navigate(['/next-page']);
-}
+ 
 }

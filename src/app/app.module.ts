@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
+import {HttpClientModule} from '@angular/common/http';
+import { GithubService }  from './services/github.service';
 
 
 @NgModule({
@@ -11,15 +13,15 @@ import { GitsearchComponent } from './gitsearch/gitsearch.component';
     AppComponent,
     UserFormComponent,
     GitsearchComponent,
-   
-   
   ],
+
   imports: [
     BrowserModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
