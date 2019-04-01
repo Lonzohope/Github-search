@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Profile } from 'selenium-webdriver/firefox';
 import { ProfileService } from '../services/profile.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-git',
@@ -11,14 +12,17 @@ import { ProfileService } from '../services/profile.service';
 export class GitComponent implements OnInit {
    private profile:any[];
 
-  constructor(private profileService: ProfileService) { 
-    // this.profileService.getProfileInfo().subscribe(profile => {
-    //   console.log(profile);
-    //   this.profile = profile;
-    // });
+  constructor(private profileService: ProfileService, private http: HttpClient ) { 
+   
 
    
   }
+  getProfileInfo(){
+
+
+  }
+
+
 
   ngOnInit() {
   }
