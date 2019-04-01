@@ -13,7 +13,7 @@ export class ProfileService {
   private repo:string;
   private baseUrl:string;
    
-private username:string;
+ username:string;
 private clientid = '6d125028f09d368b763d';
 private clientsecret = '10132e346328162cedb866d3c1def480f5c71774';
 
@@ -23,6 +23,6 @@ private clientsecret = '10132e346328162cedb866d3c1def480f5c71774';
    }
 
    getProfileInfo(){
-     return this.http.get<repo[]>(this.baseUrl+"/users/"+username+"/repos")
+     return this.http.get<Repo[]>(this.baseUrl+"/users/"+this.username)
    }
 }
