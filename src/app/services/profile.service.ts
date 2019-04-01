@@ -20,6 +20,6 @@ private clientsecret = '10132e346328162cedb866d3c1def480f5c71774';
    }
 
    getProfileInfo(){
-     return this.http.get<User[]>("https://api.github.com/users/Lonzohope" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+     return this.http.get<Repos[]>(this.baseUrl+"/users/"+username+"/repos")
    }
 }
