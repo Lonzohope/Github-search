@@ -16,6 +16,7 @@ import { Repo } from "../repo"
 export class GitComponent implements OnInit {
   users:User[];
   repos:Repo[];
+  user:any=[];
   profileName:string
   username:string="";
   constructor(private profileService: ProfileService, private http: HttpClient ) { 
@@ -25,7 +26,7 @@ export class GitComponent implements OnInit {
   }
   public getProfileInfo() {
   this.profileService.getProfileInfo(this.username).subscribe((response)=>{
-    this.users=response
+    this.user=response
 },
 (error)=>{
   
