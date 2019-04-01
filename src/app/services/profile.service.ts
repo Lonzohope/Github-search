@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from "rxjs"
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -20,6 +21,8 @@ private clientsecret = '10132e346328162cedb866d3c1def480f5c71774';
 
    getProfileInfo(){
      return this.http.get("https://api.github.com/users/Lonzohope" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
- 
+     .subscribe((res) =>{
+       console.log(res)
+     } );
    }
 }
