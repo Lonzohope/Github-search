@@ -20,19 +20,19 @@
    Have fun but not too much fun.
 </p>
  <br>
- <input type="text">
+ <input class="form-control" type="search" name="username" [(ngModel)]="username" type="text">
 
  <div>
    <button (click)=getProfileInfo()> Search</button>
   <div class="panel panel-default">
     <div class="panel-heading">
-      {{user.name}} <small>{{user.login}}</small>
+      {{users.name}} <small>{{users.login}}</small>
   
     </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-sm-3">
-          <img src="{{user.avatar_url}}"  class="img-circle img-responsive" alt="User Image">
+          <img src="{{users.avatar_url}}"  class="img-circle img-responsive" alt="User Image">
 
         </div>
         <div class="col-sm-5">

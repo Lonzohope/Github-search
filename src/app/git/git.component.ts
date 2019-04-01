@@ -21,9 +21,8 @@ export class GitComponent implements OnInit {
    
   }
   public getProfileInfo() {
-    
   this.profileService.getProfileInfo(this.username).subscribe((response)=>{
-    console.log(response)
+    this.users=response
 },
 (error)=>{
   

@@ -5,18 +5,20 @@ import { GitComponent  } from './git/git.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProfileService } from './services/profile.service';
 import { AppComponent } from './app.component';
+import { FormsModule } from  "@angular/forms"
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitComponent,
+    GitComponent
     
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   
   providers: [ProfileService],
