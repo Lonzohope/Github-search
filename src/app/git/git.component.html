@@ -25,29 +25,29 @@
  <div>
   <div class="panel panel-default">
     <div class="panel-heading">
-      {{profile.name}} <small>{{profile.login}}</small>
+      {{user.name}} <small>{{user.login}}</small>
   
     </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-sm-3">
-          <img src="{{profile.avatar_url}}"  class="img-circle img-responsive" alt="Profile Image">
+          <img src="{{user.avatar_url}}"  class="img-circle img-responsive" alt="User Image">
 
         </div>
         <div class="col-sm-5">
           <ul class="list-group">
-            <li class="list-group-item">{{profile.bio}}</li>
+            <li class="list-group-item">{{user.bio}}</li>
           </ul>
 
         </div>
         <div class="col-sm-4">
           <div>
             <p>
-              <span class="label label-primary">{{profile.followers}} | Followers</span>
-              <span class="label label-success">{{profile.public_gists}} | Public gists</span>
-              <span class="label label-info">{{profile.public_repos}} | Public repos</span>
+              <span class="label label-primary">{{user.followers}} | Followers</span>
+              <span class="label label-success">{{user.public_gists}} | Public gists</span>
+              <span class="label label-info">{{user.public_repos}} | Public repos</span>
             </p>
-            <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-primary" >View on Github</a></p>
+            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-primary" >View on Github</a></p>
           </div>
         </div>
         </div>
