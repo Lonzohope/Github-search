@@ -23,7 +23,7 @@
  <input class="form-control" type="search" name="username" [(ngModel)]="username" type="text">
 
  <div>
-   <button (click)=getProfileInfo()> Search</button>
+   <button (click)=getProfileInfo() (click)=getRepo()> Search</button>
   <div class="panel panel-default">
     <div class="panel-heading">
       {{users.name}} <small>{{users.login}}</small>
@@ -37,20 +37,32 @@
         </div>
         <div class="col-sm-5">
           <ul class="list-group">
-            <li class="list-group-item">{{user.bio}}</li>
+            <li class="list-group-item">{{users.bio}}</li>
           </ul>
 
         </div>
         <div class="col-sm-4">
           <div>
             <p>
-              <span class="label label-primary">{{user.followers}} | Followers</span>
-              <span class="label label-success">{{user.public_gists}} | Public gists</span>
-              <span class="label label-info">{{user.public_repos}} | Public repos</span>
+              <span class="label label-primary">Followers | {{users.followers}} </span>
+              <span class="label label-success">Public gists| {{users.public_gists}} | </span>
+              <span class="label label-info"> Public repos  | {{users.public_repos}}</span>
             </p>
-            <p><a href="{{user.html_url}}" target="_blank" class="btn btn-primary" >View on Github</a></p>
+            <p><a href="{{users.html_url}}" target="_blank" class="btn btn-primary" >View on Github</a></p>
           </div>
+
         </div>
+        </div>
+        <div class="row">
+          <div *ngFor="let repo of repos" class="col-md-6">
+            <div class="card">
+              <a href="{{repo.html_url}}"><h3>{{repo.name}}</h3></a> 
+              <h4>Repo id:{{repo.id}}</h4>
+              <!-- <a href="{{}}"></a> -->
+              <h5>{{repo.language}}</h5>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>

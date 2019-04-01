@@ -22,4 +22,8 @@ private clientsecret = '10132e346328162cedb866d3c1def480f5c71774';
    getProfileInfo(username:string):Observable<User[]>{
      return this.http.get<User[]>(this.baseUrl+"/users/"+ username)
    }
+
+   getRepo(username:string):Observable<Repo[]>{
+     return this.http.get<Repo[]>(this.baseUrl+"/users/"+ username + "/repos")
+   }
 }

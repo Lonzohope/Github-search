@@ -5,6 +5,8 @@ import { ProfileService } from '../services/profile.service';
 import { HttpClient } from '@angular/common/http';
 import { User } from "../user"
 import { ReplaceSource } from 'webpack-sources';
+import { Response } from 'selenium-webdriver/http';
+import { Repo } from "../repo"
 @Component({
   selector: 'app-git',
   templateUrl: './git.component.html',
@@ -13,6 +15,7 @@ import { ReplaceSource } from 'webpack-sources';
 })
 export class GitComponent implements OnInit {
   users:User[];
+  repos:Repo[];
   profileName:string
   username:string="";
   constructor(private profileService: ProfileService, private http: HttpClient ) { 
@@ -29,6 +32,12 @@ export class GitComponent implements OnInit {
 }
   )
   }
+  public getRepo(){
+    this.profileService.getRepo(this.username).subscribe((response)=>{
+      this.repos=response
+      
+    })
+    }
 
 
   ngOnInit() {
