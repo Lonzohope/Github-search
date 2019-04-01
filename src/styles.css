@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-background-image: url('https://images.pexels.com/photos/1146562/pexels-photo-1146562.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+background-image: url('https://images.pexels.com/photos/63901/pexels-photo-63901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
 background-attachment: fixed;
 background-repeat: no-repeat;
 background-size:cover;
+
 }
 
 p{
@@ -12,5 +13,10 @@ p{
 }
 
 h1{
-    color: white;
+    color: black;
 }
+
+.intro{
+    background-color:rgba(0,0,0, 0.3);
+}
+

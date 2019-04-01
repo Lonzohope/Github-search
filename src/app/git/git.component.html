@@ -7,23 +7,26 @@
 
   <img width="300" alt="image of github" src="assets/images/github.png">
 </div>
-<p class="big">
-  This is a platform where users may enter a GitHub username into a form, submit it and see names and descriptions of that person's public repositories. A person can also look for repositories.
-   <br>
+<div class="intro">
+    <p class="big">
+        This is a platform where users may enter a GitHub username into a form, submit it and see names and descriptions of that person's public repositories. A person can also look for repositories.
+         <br>
+      
+         You know those moments that you are given a project or you want to do a project but have no idea of what to do?!
+         <br>
+      
+         Well, this is the right for you. Here you can enter anyone's name on github or certain repository and access it on Github.
+         <br>
+      
+         Have fun but not too much fun.
+      </p>
+       <br>
+</div>
 
-   You know those moments that you are given a project or you want to do a project but have no idea of what to do?!
-   <br>
-
-   Well, this is the right for you. Here you can enter anyone's name on github or certain repository and access it on Github.
-   <br>
-
-   Have fun but not too much fun.
-</p>
- <br>
  <input class="form-control" type="search" name="username" [(ngModel)]="username" type="text">
 
  <div>
-   <button (click)=getProfileInfo() (click)=getRepo()> Search</button>
+   <button  (click)=getProfileInfo() (click)=getRepo()> Search</button>
   <div class="panel panel-default">
     <div class="panel-heading">
       {{users.name}} <small>{{users.login}}</small>
